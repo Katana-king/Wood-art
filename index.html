@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wood Art</title>
+  <!-- font poppins-->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+ <!-- Font Awesome Icons -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ 
+
+</head>
+
+<body>
+
+<!-- Header -->
+<header class="bg-white shadow-sm" id="main-header">
+  <div class="container py-3 d-flex align-items-center justify-content-between flex-wrap">
+
+    <!-- Logo -->
+    <div class="d-flex align-items-center">
+      <img src="Woodart.png" alt="logo" width="60" height="60" class="me-2">
+      <h1 class="logo m-0 fs-5">Wood Art</h1>
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="d-flex flex-wrap align-items-center justify-content-center flex-grow-1 mx-4">
+      <a href="#home" class="mx-2 text-decoration-none">Accueil</a>
+      <a href="#boutique" class="mx-2 text-decoration-none">Explorer</a>
+      <a href="product.html" class="mx-2 text-decoration-none">Boutique</a>
+      <a href="#apropos" class="mx-2 text-decoration-none">A propos</a>
+      <a href="#contact" class="mx-2 text-decoration-none">Contact</a>
+      <a href="cart.html" class="mx-2 text-dark text-decoration-none">
+        <i class="fas fa-shopping-cart"></i> Panier
+      </a>
+    </nav>
+
+    <!-- Search & Dark Mode -->
+    <div class="d-flex align-items-center">
+      <!-- Search -->
+      <form class="d-flex" role="search">
+        <input class="form-control form-control-sm me-2" type="search" placeholder="Rechercher..." style="width: 150px;">
+        <button class="btn btn-outline-dark btn-sm" type="submit">
+          <i class="bi bi-search"></i>
+        </button>
+      </form>
+
+      <!-- Dark Mode Toggle -->
+      <button class="btn btn-outline-dark btn-sm ms-2" onclick="toggleDarkMode()" title="Changer le thème">
+        <i class="bi bi-moon"></i>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+
+<!-- Hero Section -->
+
+<section id="home" class="hero d-flex align-items-center text-white text-center">
+  <div class="animated-bg"></div>
+  <div class="arabesque-background"></div> <!-- خلفية أرابيسك -->
+  <div class="golden-circles"></div>
+  <div class="container position-relative z-2 text-center" data-aos="fade-up">
+      <h1 class="hero-title mb-3">Bienvenue chez Wood Art !</h1>
+      <p class="hero-subtitle mb-4">Découvrez des décorations en bois uniques qui allient authenticité et modernité, fabriquées avec soin pour sublimer votre intérieur.
+          Parcourez nos collections variées : Autocollants, Motifs, Salons, Décor, Ramadan...</p>
+      <a href="#boutique" class="btn btn-light">Découvrir Nos Produits</a>
+
+      <!-- مواقع التواصل الاجتماعي -->
+      <div class="social-icons mt-4">
+        <a href="https://www.instagram.com/wood___art_/?hl=fr" target="_blank" class="text-white mx-2 fs-3">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/woodart03/" target="_blank" class="text-white mx-2 fs-3">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://wa.me/213559476467" target="_blank" class="text-white mx-2 fs-3">
+          <i class="bi bi-whatsapp"></i>
+        </a>
+      </div>
+  </div>
+</section>
+
+  
+  
+  
+
+
+
+<!-- Products Section -->
+<section id="boutique" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">Nos Produits</h2>
+    <div class="row g-4">
+      <!-- Product Card  -->
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card">
+          <img src="SBS.JPG" class="card-img-top" alt="woodart">
+          <div class="card-body">
+            <h5 class="card-title">Salon arabesque</h5>
+            <p class="card-text">Salon arabesque en bois rouge (4 canapé+table).</p>
+            <p class="fw-bold">WOODART.DZ</p>
+           
+          </div>
+        </div>
+      </div>
+       <!-- Product Card 2 -->
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card">
+          <img src="SBN.JPG" class="card-img-top" alt="salon">
+          <div class="card-body">
+            <h5 class="card-title">Salon algerien</h5>
+            <p class="card-text">Salon en bois naturel (3table petite +miroir +table basse).</p>
+            <p class="fw-bold">WOODART</p>
+           
+          </div>
+        </div>
+      </div>
+<!-- Product Card  3-->
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card">
+          <img src="MB.JPG" class="card-img-top" alt="salon">
+          <div class="card-body">
+            <h5 class="card-title">Miroir blue en bois rouge </h5>
+            <p class="card-text">Miroir arabesque en bois blue électrique dimensions 120/60cm</p>
+            <p class="fw-bold">WOODART</p>
+            
+          </div>
+        </div>
+      </div>
+<!-- Product Card  5-->
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card">
+          <img src="CR.jpg" class="card-img-top" alt="salon">
+          <div class="card-body">
+            <h5 class="card-title">Calendrier ramadan</h5>
+            <p class="card-text">calendrier ajoute une atmosphére accueillante pour célébrer ce mois sacré.</p>
+            <p class="fw-bold">WOODART</p>
+            
+          </div>
+        </div>
+      </div>
+<!-- Product Card  5-->
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card">
+          <img src="CT.JPG" class="card-img-top" alt="woodart">
+          <div class="card-body">
+            <h5 class="card-title">Chemin de table noir pour Ramadan</h5>
+            <p class="card-text">Ajoutez une touche d’élégance à votre table de Ramadan avec notre chemin de table noir raffiné, parfait pour créer une ambiance chaleureuse et spirituelle..</p>
+            <p class="fw-bold">WOODART</p>
+            
+          </div>
+        </div>
+      </div>
+      <!-- Product Card  6-->
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card">
+          <img src="DI.JPG" class="card-img-top" alt="woodart">
+          <div class="card-body">
+            <h5 class="card-title">Décoration Ramadan noire en plexi</h5>
+            <p class="card-text">Une décoration moderne et épurée en plexiglas noir, idéale pour sublimer vos espaces durant le mois sacré.</p>
+            <p class="fw-bold">WOODART</p>
+            
+          </div>
+        </div>
+      </div>
+<!-- Product Card  7-->
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card">
+          <img src="SDT.JPG" class="card-img-top" alt="woodart">
+          <div class="card-body">
+            <h5 class="card-title">sets de tables</h5>
+            <p class="card-text">deux sets de tables + deux sous verre +deux attaches serviettes, idéale pour sublimer vos tables durant le mois sacré.</p>
+            <p class="fw-bold">WOODART</p>
+            
+          </div>
+        </div>
+      </div>
+<!-- Product Card  7-->
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card">
+          <img src="COINS.JPG" class="card-img-top" alt="woodart">
+          <div class="card-body">
+            <h5 class="card-title">Coins doré </h5>
+            <p class="card-text">des coins doré en plexi 10 pieces </p>
+            <p class="fw-bold">WOODART</p>
+           
+          </div>
+        </div>
+      </div>
+<!-- Product Card  -->
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card">
+          <img src="SV.JPG" class="card-img-top" alt="woodart">
+          <div class="card-body">
+            <h5 class="card-title">des motifs saint vallentin </h5>
+            <p class="card-text">10 pieces.</p>
+            <p class="fw-bold">WOODART</p>
+            
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+<!-- Product Card  -->
+      
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card">
+          <img src="EG.JPG" class="card-img-top" alt="woodart">
+          <div class="card-body">
+            <h5 class="card-title">Écran géant publicitaire</h5>
+            <p class="card-text">Attirez tous les regards avec notre écran géant publicitaire.
+                (Pour vos commandes, contactez-nous par téléphone ou WhatsApp +213 5 59476467 ).</p>
+            
+            
+          </div>
+        </div>
+      </div>
+<!-- Product Card  -->
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card">
+          <img src="MG.jpg" class="card-img-top" alt="woodart">
+          <div class="card-body">
+            <h5 class="card-title">Panneaux publicitaires</h5>
+            <p class="card-text">Des panneaux personnalisés pour mettre en valeur votre marque, vos offres ou vos événements avec impact et professionnalisme.
+                (Pour vos commandes, contactez-nous par téléphone ou WhatsApp +213 5 59476467 ).</p>
+            
+           
+          </div>
+        </div>
+      </div>
+<!-- Product Card  -->
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card">
+          <img src="VV.png" class="card-img-top" alt="woodart">
+          <div class="card-body">
+            <h5 class="card-title">Panneaux pour ville</h5>
+            <p class="card-text">Des panneaux robustes et esthétiques conçus pour l’affichage urbain, parfaits pour la signalétique ou les campagnes locales
+            (Pour vos commandes, contactez-nous par téléphone ou WhatsApp +213 5 59476467 )</p>
+            
+            
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<!-- Testimonials Section -->
+<section class="bg-light py-5" id="apropos">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">À propos de Wood Art</h2>
+
+    <!-- Swiper -->
+    <div class="swiper mySwiper" data-aos="fade-up">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide p-4 bg-white shadow-sm rounded text-center">
+          <img src="Woodart.png" alt="logo" width="60" class="mb-3">
+          <p class="mb-3">"Wood Art, l’élégance du bois algérien. Fondée en 2019 à Laghouat, ville connue pour ses salons traditionnels. Chaque pièce est fabriquée avec passion et finesse."</p>
+          <h6 class="fw-bold m-0">Wood Art Team</h6>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide p-4 bg-white shadow-sm rounded text-center">
+          <img src="Woodart.png" alt="artisan" width="60" class="mb-3">
+          <p class="mb-3">"Nos produits sont le reflet de l’héritage culturel et de l’artisanat algérien, réinventés pour les intérieurs modernes."</p>
+          <h6 class="fw-bold m-0">Atelier Laghouat</h6>
+        </div>
+
+      </div>
+
+      <div class="swiper-pagination mt-3"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">Contactez-Nous</h2>
+    <form class="row g-3" action="contact.php" method="POST" data-aos="fade-up">
+      <div class="col-md-6">
+        <input type="text" class="form-control" name="name" placeholder="Nom" required>
+      </div>
+      <div class="col-md-6">
+        <input type="email" class="form-control" name="email" placeholder="Email" required>
+      </div>
+      <div class="col-12">
+        <textarea class="form-control" name="message" rows="5" placeholder="Votre message" required></textarea>
+      </div>
+      <div class="col-12 text-center">
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-dark text-white pt-5 pb-4">
+  <div class="container text-center text-md-start">
+    <div class="row text-center text-md-start">
+      
+      <!-- Logo & Description -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 fw-bold">Wood Art</h5>
+        <p>Décorations en bois algériennes, artisanales et uniques. Alliez tradition et élégance.</p>
+      </div>
+
+      <!-- Liens Utiles -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 fw-bold">Liens</h5>
+        <p><a href="index.html" class="text-white text-decoration-none">Accueil</a></p>
+        <p><a href="cart.html" class="text-white text-decoration-none">Panier</a></p>
+        <p><a href="#apropos" class="text-white text-decoration-none">A propos</a></p>
+        <p><a href="#contact" class="text-white text-decoration-none">Contact</a></p>
+      </div>
+
+      <!-- Réseaux Sociaux -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 fw-bold">Suivez-nous</h5>
+        <a href="https://www.facebook.com/woodart03/" target="_blank" class="text-white me-3 fs-5"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/wood___art_/?hl=fr"target="_blank"  class="text-white me-3 fs-5"><i class="fab fa-instagram"></i></a>
+        <a href="https://api.whatsapp.com/send/?phone=213559476467&text&type=phone_number&app_absent=0" target="_blank" class="text-white me-3 fs-5"><i class="fab fa-telegram"></i></a>
+        <a href="https://www.pinterest.com/artwood245/?invite_code=cac4e2f8e04a4d51baf6032d4343d8b5&sender=785174653693028832"  target="_blank" class="text-white me-3 fs-5"><i class="fab fa-pinterest"></i></a>
+      </div>
+    </div>
+
+    <!-- Ligne Séparatrice -->
+    <hr class="my-3">
+
+    <!-- Droits -->
+    <div class="text-center">
+      <p class="mb-0">&copy; 2025 Wood Art — Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+  AOS.init();
+  var swiper = new Swiper(".mySwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    loop: true,
+  });
+</script>
+<script>
+  function searchProducts(event) {
+    event.preventDefault(); // ما يخليش الصفحة تعاود التحديث
+  
+    const query = document.getElementById("searchInput").value.toLowerCase();
+    const cards = document.querySelectorAll("#boutique .card");
+  
+    cards.forEach(card => {
+      const title = card.querySelector(".card-title").textContent.toLowerCase();
+      const description = card.querySelector(".card-text").textContent.toLowerCase();
+  
+      if (title.includes(query) || description.includes(query)) {
+        card.parentElement.style.display = "block";
+      } else {
+        card.parentElement.style.display = "none";
+      }
+    });
+  
+    // Scroll لنتائج البحث
+    document.getElementById("boutique").scrollIntoView({ behavior: "smooth" });
+  }
+  </script>
+
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    document.getElementById("main-header").classList.toggle("dark-mode");
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+</script>
+
+
+
+</body>
+</html>

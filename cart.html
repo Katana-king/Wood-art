@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Votre Panier</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   <!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="bg-white shadow-sm">
+  <div class="container d-flex justify-content-between align-items-center py-3">
+    <div class="d-flex align-items-center">
+      <img src="Woodart.png" alt="logo" width="70" height="70" class="me-2">
+      <h1 class="logo m-0 fs-4">Wood Art</h1>
+    </div>
+    <nav>
+      <a href="index.html" class="mx-3">Accueil</a>
+      <a href="product.html" class="mx-3">Boutique</a>
+      <a href="cart.html" class="mx-2 text-dark text-decoration-none">
+        <i class="fas fa-shopping-cart"></i> Panier
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- Cart -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Votre Panier</h2>
+    <div id="cart-items" class="mb-4"></div>
+    <div class="text-center">
+      <h4>Total: <span id="total">0</span> DA</h4>
+      <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#checkoutModal">Commander</button>
+    </div>
+  </div>
+</section>
+
+<!-- Checkout Modal -->
+<div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form id="orderForm">
+        <div class="modal-header">
+          <h5 class="modal-title" id="checkoutModalLabel">Finaliser la commande</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="fullName" class="form-label">Nom complet</label>
+            <input type="text" class="form-control" id="fullName" name="fullName" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Adresse e-mail</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="wilaya" class="form-label">Wilaya</label>
+            <select class="form-select" id="wilaya" name="wilaya" required>
+              <option value="" disabled selected>Choisissez votre wilaya</option>
+              <option value="Adrar">Adrar</option>
+              <option value="Chlef">Chlef</option>
+              <option value="Laghouat">Laghouat</option>
+              <option value="Oum El Bouaghi">Oum El Bouaghi</option>
+              <option value="Batna">Batna</option>
+              <option value="Béjaïa">Béjaïa</option>
+              <option value="Biskra">Biskra</option>
+              <option value="Béchar">Béchar</option>
+              <option value="Blida">Blida</option>
+              <option value="Bouira">Bouira</option>
+              <option value="Tamanrasset">Tamanrasset</option>
+              <option value="Tébessa">Tébessa</option>
+              <option value="Tlemcen">Tlemcen</option>
+              <option value="Tiaret">Tiaret</option>
+              <option value="Tizi Ouzou">Tizi Ouzou</option>
+              <option value="Alger">Alger</option>
+              <option value="Djelfa">Djelfa</option>
+              <option value="Jijel">Jijel</option>
+              <option value="Sétif">Sétif</option>
+              <option value="Saïda">Saïda</option>
+              <option value="Skikda">Skikda</option>
+              <option value="Sidi Bel Abbès">Sidi Bel Abbès</option>
+              <option value="Annaba">Annaba</option>
+              <option value="Guelma">Guelma</option>
+              <option value="Constantine">Constantine</option>
+              <option value="Médéa">Médéa</option>
+              <option value="Mostaganem">Mostaganem</option>
+              <option value="M’Sila">M’Sila</option>
+              <option value="Mascara">Mascara</option>
+              <option value="Ouargla">Ouargla</option>
+              <option value="Oran">Oran</option>
+              <option value="El Bayadh">El Bayadh</option>
+              <option value="Illizi">Illizi</option>
+              <option value="Bordj Bou Arréridj">Bordj Bou Arréridj</option>
+              <option value="Boumerdès">Boumerdès</option>
+              <option value="El Tarf">El Tarf</option>
+              <option value="Tindouf">Tindouf</option>
+              <option value="Tissemsilt">Tissemsilt</option>
+              <option value="El Oued">El Oued</option>
+              <option value="Khenchela">Khenchela</option>
+              <option value="Souk Ahras">Souk Ahras</option>
+              <option value="Tipaza">Tipaza</option>
+              <option value="Mila">Mila</option>
+              <option value="Aïn Defla">Aïn Defla</option>
+              <option value="Naâma">Naâma</option>
+              <option value="Aïn Témouchent">Aïn Témouchent</option>
+              <option value="Ghardaïa">Ghardaïa</option>
+              <option value="Relizane">Relizane</option>
+              <option value="Timimoun">Timimoun</option>
+              <option value="Bordj Badji Mokhtar">Bordj Badji Mokhtar</option>
+              <option value="Ouled Djellal">Ouled Djellal</option>
+              <option value="Béni Abbès">Béni Abbès</option>
+              <option value="In Salah">In Salah</option>
+              <option value="In Guezzam">In Guezzam</option>
+              <option value="Touggourt">Touggourt</option>
+              <option value="Djanet">Djanet</option>
+              <option value="El M'Ghair">El M'Ghair</option>
+              <option value="El Menia">El Menia</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-3">
+  <label for="phone" class="form-label">Numéro de téléphone</label>
+  <input type="tel" class="form-control" id="phone" name="phone" required>
+</div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Confirmer la commande</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer class="bg-dark text-white pt-5 pb-4">
+  <div class="container text-center text-md-start">
+    <div class="row text-center text-md-start">
+      
+      <!-- Logo & Description -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 fw-bold">Wood Art</h5>
+        <p>Décorations en bois algériennes, artisanales et uniques. Alliez tradition et élégance.</p>
+      </div>
+
+      <!-- Liens Utiles -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 fw-bold">Liens</h5>
+        <p><a href="index.html" class="text-white text-decoration-none">Accueil</a></p>
+        <p><a href="cart.html" class="text-white text-decoration-none">Panier</a></p>
+        <p><a href="#apropos" class="text-white text-decoration-none">A propos</a></p>
+        <p><a href="#contact" class="text-white text-decoration-none">Contact</a></p>
+      </div>
+
+      <!-- Réseaux Sociaux -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 fw-bold">Suivez-nous</h5>
+        <a href="https://www.facebook.com/woodart03/" target="_blank" class="text-white me-3 fs-5"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/wood___art_/?hl=fr"target="_blank"  class="text-white me-3 fs-5"><i class="fab fa-instagram"></i></a>
+        <a href="https://api.whatsapp.com/send/?phone=213559476467&text&type=phone_number&app_absent=0" target="_blank" class="text-white me-3 fs-5"><i class="fab fa-telegram"></i></a>
+        <a href="https://www.pinterest.com/artwood245/?invite_code=cac4e2f8e04a4d51baf6032d4343d8b5&sender=785174653693028832"  target="_blank" class="text-white me-3 fs-5"><i class="fab fa-pinterest"></i></a>
+      </div>
+    </div>
+
+    <!-- Ligne Séparatrice -->
+    <hr class="my-3">
+
+    <!-- Droits -->
+    <div class="text-center">
+      <p class="mb-0">&copy; 2025 Wood Art — Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function loadCart() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  let output = '';
+  let total = 0;
+
+  cart.forEach((item, index) => {
+    output += `
+      <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3">
+        <div>
+          <h5>${item.name}</h5>
+          <p>Quantité: ${item.quantity}</p>
+        </div>
+        <div class="text-end">
+          <p><strong>${item.price * item.quantity} DA</strong></p>
+          <button class="btn btn-danger btn-sm" onclick="removeItem(${index})">Supprimer</button>
+        </div>
+      </div>
+    `;
+    total += item.price * item.quantity;
+  });
+
+  document.getElementById('cart-items').innerHTML = output;
+  document.getElementById('total').innerText = total;
+}
+
+function removeItem(index) {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cart.splice(index, 1);
+  localStorage.setItem('cart', JSON.stringify(cart));
+  loadCart(); // refresh cart display
+}
+
+function confirmOrder() {
+  alert('Merci pour votre commande ! Votre paiement se fera à la livraison.');
+  localStorage.removeItem('cart');
+  window.location.href = 'index.html';
+}
+
+loadCart();
+</script>
+<script>
+document.getElementById('orderForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const fullName = document.getElementById('fullName').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim(); // Get phone number
+  const wilaya = document.getElementById('wilaya').value;
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  if (!cart.length) {
+    alert("Votre panier est vide.");
+    return;
+  }
+
+  let orderDetails = cart.map(item => 
+    `${item.name} (${item.quantity}x) - ${item.price * item.quantity} DA`
+  ).join('\n');
+
+  let total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+  const formData = new FormData();
+  formData.append('fullName', fullName);
+  formData.append('email', email);
+  formData.append('phone', phone); // Add phone to form data
+  formData.append('wilaya', wilaya);
+  formData.append('orderDetails', orderDetails);
+  formData.append('total', total + ' DA');
+
+  // Add loading state to button
+  const submitBtn = document.querySelector('#orderForm button[type="submit"]');
+  const originalBtnText = submitBtn.textContent;
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Envoi en cours...";
+
+  fetch('send_order.php', {
+    method: 'POST',
+    body: formData
+  })
+    .then(res => res.text())
+    .then(response => {
+      alert("Commande envoyée avec succès !");
+      localStorage.removeItem('cart');
+      window.location.href = 'index.html';
+    })
+    .catch(err => {
+      console.error("Erreur lors de l'envoi :", err);
+      alert("Erreur lors de l'envoi de votre commande. Réessayez plus tard.");
+    })
+    .finally(() => {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalBtnText;
+    });
+});
+</script>
+
+
+</body>
+</html>
