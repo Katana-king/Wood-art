@@ -172,46 +172,85 @@ border-radius: 80px;
     color: gold;
     transform: scale(1.2);
   }
-  .dark-mode {
-    background-color: #121212 !important;
-    color: #f1f1f1 !important;
-  }
-  
-  .dark-mode a {
-    color: #f1f1f1 !important;
-  }
-  
-  
-  .dark-mode input,
-  .dark-mode .form-control,
-  .dark-mode .btn-outline-dark {
-    background-color: #1f1f1f;
-    color: #fff;
-    border-color: #fffefe;
-  }
-
-  body.dark-mode {
-    background-color: #121212;
-    color: #f5f5f5;
-  }
-  
-  body.dark-mode header {
-    background-color: #1f1f1f;
-  }
-  
-  body.dark-mode a, 
-  body.dark-mode h1, 
-  body.dark-mode p {
-    color: #f5f5f5 !important;
-  }
-  
-  body.dark-mode .btn-outline-dark {
-    border-color: #f5f5f5;
-    color: #f5f5f5;
-  }
-  body.dark-mode .logo {
-  filter: invert(1);
+/* General dark mode styling */
+.dark-mode {
+  background-color: #121212 !important;
+  color: #f1f1f1 !important;
 }
 
-  
-  
+.dark-mode a {
+  color: #f1f1f1 !important;
+}
+
+.dark-mode input,
+.dark-mode .form-control,
+.dark-mode .btn-outline-dark {
+  background-color: #1f1f1f;
+  color: #fff;
+  border-color: #fffefe;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+/* Keep the entire header white in dark mode */
+body.dark-mode header {
+  background-color: #ffffff !important; /* Ensure header background is white */
+  color: #000 !important; /* Ensure text in the header is black */
+  filter: none !important; /* Remove any filter effects */
+}
+
+/* Ensure all elements inside the header (like links, h1, p) stay black */
+body.dark-mode header a, 
+body.dark-mode header h1, 
+body.dark-mode header p {
+  color: #000 !important; /* Keep header text black */
+}
+
+/* Ensure logo doesn't change */
+body.dark-mode header .logo {
+  filter: none !important; /* Remove any filter effects on logo */
+}
+
+/* Adjust navbar or header components as needed */
+body.dark-mode header nav {
+  background-color: #ffffff !important; /* Ensure navbar remains white */
+  color: #000 !important; /* Ensure navbar text remains black */
+}
+
+/* Ensure header items like buttons or other elements stay white or black */
+body.dark-mode header button {
+  background-color: #ffffff !important;
+  color: #000 !important; /* Ensure buttons stay visible */
+}
+
+body.dark-mode header .btn-outline-dark {
+  border-color: #000 !important; /* Border remains black */
+  color: #000 !important; /* Text remains black */
+}
+body.dark-mode .search input,
+body.dark-mode .search-bar .form-control {
+  background-color: #ffffff !important; /* Keep search bar background white */
+  color: #000 !important; /* Ensure text inside search bar is black */
+  border-color: #ccc !important; /* Optional: Make the border a light color */
+}
+/* Ensure the search input stays white in dark mode */
+body.dark-mode .d-flex .form-control {
+  background-color: #ffffff !important; /* Set the background to white */
+  color: #000 !important; /* Set the text color to black */
+  border-color: #ccc !important; /* Optional: Set border color for better contrast */
+}
+
+/* Ensure the search button stays with a dark outline in dark mode */
+body.dark-mode .d-flex .btn-outline-dark {
+  background-color: #ffffff !important; /* Ensure button stays white */
+  color: #000 !important; /* Ensure text is black on button */
+  border-color: #ccc !important; /* Optional: Set border color for the button */
+}
+
+/* Optional: If the icon color is affected, set it explicitly */
+body.dark-mode .d-flex .bi-search {
+  color: #000 !important; /* Set the search icon color to black */
+}
